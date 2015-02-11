@@ -4,11 +4,11 @@
 
 ##Explanation
 
-<h3>Tables for data renedering</h2>
+<h3>Tables for data renedering</h3>
 <ol> 
 <li>Tables have been part of HTML almost since HTML began. The idea was to make it possible to display tabular data, equivalent to a spreadsheet. </li>
- <li>This purpose is still valid. Using tables for tabular data is perfectly standards-compliant and makes a lot of sense from an accessibility standpoint.</li> 
- <li>HTML tables should only be used for rendering data that belongs naturally in a grid, in other words where the data describe a number of objects that have the same properties. </li>
+<li>This purpose is still valid. Using tables for tabular data is perfectly standards-compliant and makes a lot of sense from an accessibility standpoint.</li> 
+<li>HTML tables should only be used for rendering data that belongs naturally in a grid, in other words where the data describe a number of objects that have the same properties. </li>
 </ol>
 
 <h3>Tables for data layout</h3>
