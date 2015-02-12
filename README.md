@@ -20,6 +20,7 @@
 </li>
 <li>Excess code slows down development and raises maintenance costs.
 More lines of code mean larger file sizes, which mean longer download times. Because tables increase the code base, such structures likely contain more bugs than layouts with less code lines.</li>
+</ol>
 
 
 ##Recommended
