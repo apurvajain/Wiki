@@ -33,11 +33,56 @@
 <li>Tables prevent certain layouts from working within them (like height:100% for child elements of <td>).</li>
 <li>Tables make life hell for those using screen readers.</li>
 <li>Tables lock you into the current design and make redesigns MUCH harder than semantic HTML+CSS.</li>
-<li>Tables are less flexible than divs etc.</li>
+<li>Tables are less flexible than divs, eg. It is possible to rearrange the order in which boxes are displayed on a page, even make them stack, just by changing a few CSS properties. This is impossible with tables, which are rigid and immovable.</li>
+
 </ol>
 
 ##Example 
-<p>It is possible to rearrange the order in which boxes are displayed on a page, even make them stack, just by changing a few CSS properties. This is impossible with tables, which are rigid and immovable.</p>
+
+```html <table>
+  <tr>
+    <td>Some content here</td>
+  </tr>
+</table>
+```
+
+To make css work like tables :
+index.html
+```html <div id="container">
+  <div id="row">
+
+  	<div id="left">
+  		<h4>Left Col</h4>
+  		<p>...</p>
+  	</div>
+
+  	<div id="middle">
+  		<h4>Middle Col</h4>
+  		<p>...</p>
+  	</div>
+
+  	<div id="right">
+    	<h4>Right Col</h4>
+    	<p>...</p>
+  	</div>
+
+	</div>
+</div>
+
+```
+style.css
+```html #container {
+display: table;
+}
+
+#row  {
+display: table-row;
+}
+
+#left, #right, #middle {
+display: table-cell;
+}
+```
 
 
 
