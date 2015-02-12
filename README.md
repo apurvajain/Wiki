@@ -32,53 +32,43 @@
 <ol><li>Tables are semantically incorrect markup for layout.</li>
 <li>Tables prevent certain layouts from working within them (like height:100% for child elements of <td>).</li>
 <li>Tables make life hell for those using screen readers.</li>
-<li>Tables lock you into the current design and make redesigns MUCH harder than semantic HTML+CSS.</li>
-<li>Tables are less flexible than divs, eg. It is possible to rearrange the order in which boxes are displayed on a page, even make them stack, just by changing a few CSS properties. This is impossible with tables, which are rigid and immovable.</li>
+<li>Tables are less flexible than divs - Table contains different tags: the table tag being the wrapper, tr for each row and td for each cell. For readability, each tag is normally given its own line of code, with indention. Any developer maintaining that page in future has to go through a lot of code to understand its structure.</li>
+<li>Nested tables are code smell that a website is stuck in table hell. The number of lines of code is endless, and the complexity is overwhelming. Tables are far from clean code and don’t bring anything semantic to the content unless you’re dealing with actual tabular data.
+</li>
+<li>Excess code slows down development and raises maintenance costs.
+More lines of code mean larger file sizes, which mean longer download times. Because tables increase the code base, such structures likely contain more bugs than layouts with less code lines.</li>
 
 </ol>
 
 ##Example 
 
+To make html tables : <br> 
+index.html
 ```html 
-<table>
+<table cellpadding="0" cellspacing="0" border="0">
   <tr>
-    <td>Some content here</td>
+    <td colspan="3" height="120px">....</td>
   </tr>
+  <tr>
+    <td class="menu" valign="top">...</td>
+    <td class="content" valign="top">...</td>
+    <td class="aSide" valign="top">...</td>
+  </tr>
+  <tr>
+    <td colspan="3">...</td>
+  </tr>
+</table>
 </table>
 ```
 
-To make css work like tables :
+To make css work like tables :<br>
 index.html
 ```html 
-<div id="container">
-    <div id="row">
-  	<div id="left">
-  		<h4>Left Col</h4>
-  		<p>...</p>
-  	</div>
-  	<div id="middle">
-  		<h4>Middle Col</h4>
-  		<p>...</p>
-  	</div>
-  	<div id="right">
-    	<h4>Right Col</h4>
-    	<p>...</p>
-  	</div>
-	</div>
-</div>
-```
-style.css
-
-```html
-#container {
-display: table;
-}
-#row  {
-display: table-row;
-}
-#left, #right, #middle {
-display: table-cell;
-}
+<div id="header">...</div>
+<div id="menu">...</div>
+<div id="content">...</div>
+<div id="aSide">...</div>
+<div id="footer">...</div>
 ```
 
 
