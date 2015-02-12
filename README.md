@@ -35,7 +35,7 @@ More lines of code mean larger file sizes, which mean longer download times. Bec
 ##Not Recommended
 <h3>Tables should never be used for layout: Why?</h3>
 <ol><li>Tables are semantically incorrect markup for layout.</li>
-<li>Tables prevent certain layouts from working within them (like height:100% for child elements of <td>).</li>
+<li>Tables prevent certain layouts from working within them (like height:100% for child elements of td tag).</li>
 <li>Tables make life difficult for those using screen readers.</li>
 <li>Tables lock you into the current design and make redesigns much harder.</li>
 </ol>
