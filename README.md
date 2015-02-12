@@ -39,7 +39,7 @@
 
 ##Example 
 
-```html <table>
+```<table>
   <tr>
     <td>Some content here</td>
   </tr>
@@ -48,37 +48,31 @@
 
 To make css work like tables :
 index.html
-```html <div id="container">
-  <div id="row">
-
+```<div id="container">
+    <div id="row">
   	<div id="left">
   		<h4>Left Col</h4>
   		<p>...</p>
   	</div>
-
   	<div id="middle">
   		<h4>Middle Col</h4>
   		<p>...</p>
   	</div>
-
   	<div id="right">
     	<h4>Right Col</h4>
     	<p>...</p>
   	</div>
-
 	</div>
 </div>
-
 ```
 style.css
-```html #container {
+
+```#container {
 display: table;
 }
-
 #row  {
 display: table-row;
 }
-
 #left, #right, #middle {
 display: table-cell;
 }
