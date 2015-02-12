@@ -39,7 +39,8 @@
 
 ##Example 
 
-```<table>
+```html 
+<table>
   <tr>
     <td>Some content here</td>
   </tr>
@@ -48,7 +49,8 @@
 
 To make css work like tables :
 index.html
-```<div id="container">
+```html 
+<div id="container">
     <div id="row">
   	<div id="left">
   		<h4>Left Col</h4>
@@ -67,7 +69,8 @@ index.html
 ```
 style.css
 
-```#container {
+```html
+#container {
 display: table;
 }
 #row  {
